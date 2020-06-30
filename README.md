@@ -1,2 +1,5 @@
-### Cifrador de archivos en Python
-Este programa hecho en Python te permitira hacer cifrado de archivos en el modo AES-256-EAX mezclado con SHA3_512
+### Cifrador actualizado!
+
+Ahora puedes cualquier tipo de archivo!
+
+Algoritmo usado: AES-256 CDC
