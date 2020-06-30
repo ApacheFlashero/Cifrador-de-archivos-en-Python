@@ -1,4 +1,4 @@
-# Hecho por Sundyz
+# Hecho por Retrozen
 # Librerias
 # Instalar con 'python -m pip install -U pycryptodome' como administrador
 import os
@@ -11,7 +11,7 @@ from Crypto.Random import get_random_bytes
 
 def Instrucciones():
     print("Bienvenido al cifrador de archivos!")
-    print("Hecho con amor por Sundyz <3")
+    print("Hecho con amor por Retrozen <3")
     print("Instrucciones:")
     print("1- Insertar el nombre del archivo.")
     print("2- C para cifrar.")
