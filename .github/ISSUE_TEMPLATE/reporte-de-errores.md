@@ -16,10 +16,10 @@ Una descripción clara y concisa de qué es lo que esperabas.
 **Capturas de pantalla**
 Si corresponde, agregue capturas de pantalla para ayudar a explicar su problema.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Computadora (Por favor complete la siguiente información):**
+ - OS: [e.j. Windows]
+ - Navegador [e.j. Chrome, Firefox]
+ - Version [e.g. 10]
 
 **Smartphone (Por favor complete la siguiente información):**
  - Dispositivo: [e.j. iPhone6]
