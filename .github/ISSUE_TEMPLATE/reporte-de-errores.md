@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Describe el error*
+**Describe el error**
 Una descripción clara y concisa de qué es el error.
 
 **Comportamiento esperador**
