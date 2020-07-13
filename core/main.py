@@ -18,12 +18,6 @@ def Instrucciones():
     print("2- C para cifrar.")
     print("3- D para descifrar.")
 
-def LoggingFile():
-    LOG_FILENAME = "prueba.log"
-    logging.basicConfig(filename=LOG_FILENAME, level=logging.log)
-
-    logging.log()
-
 # Cifrar
 def Encrypt(key, filename):
     chunksize = 64 * 1024
@@ -82,14 +76,12 @@ def Main():
         filename = input("Archivo a cifrar: ")
         password = input("Contraseña: ")
         Encrypt(getKey(password), filename)
-        LoggingFile()
         print("Hecho.")
         
     elif choice == "D":
         filename = input("Archivo a descifrar: ")
         password = input("Contraseña: ")
         Decrypt(getKey(password), filename)
-        LoggingFile()
         print("Hecho.")
         
     else:
