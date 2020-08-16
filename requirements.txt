@@ -1,0 +1,4 @@
+pycryptodome
+logging
+base64
+os
