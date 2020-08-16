@@ -1,7 +1,3 @@
-# Hecho por Retrozen
-# Librerias
-# Instalar con 'python -m pip install -U pycryptodome' como administrador
-
 import logging
 import os
 import base64
