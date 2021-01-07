@@ -41,7 +41,7 @@ def Encrypt(key, filename):
 # Descifrar
 def Decrypt(key, filename):
     chunksize = 64 * 1024
-    outputFile = filename[:11]
+    outputFile = input("Nombre de salida(Incluir extension): ")
 
     with open(filename, 'rb') as infile:
         filesize = int(infile.read(16))
@@ -77,6 +77,7 @@ def Main():
     elif choice == "D":
         filename = input("Archivo a descifrar: ")
         password = input("Contraseña: ")
+        
         Decrypt(getKey(password), filename)
         print("Hecho.")
         
