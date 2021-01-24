@@ -1,5 +1,5 @@
-# Cifrador actualizado y ahora es ejecutable para Windows.
+# Updated cipher and now executable for Windows.
 
-*Ahora puedes cifrar cualquier tipo de archivo.*
+*Now you can encrypt any type of file.*
 
-## Algoritmo usado: AES-256 CBC
+## Algorithm used: AES-256 CBC
