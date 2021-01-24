@@ -1,4 +1,3 @@
-import logging
 import os
 import base64
 from Crypto.Cipher import AES
@@ -7,11 +6,11 @@ from Crypto.Hash import SHA512
 from Crypto import Random
 from Crypto.Random import get_random_bytes
 
-def Instrucciones():
-    print("Bienvenido al cifrador de archivos!")
-    print("Instrucciones:")
-    print("1- Insertar el nombre del archivo.")
-    print("2- C para cifrar.")
+def Instructions():
+    print("Welcome to the file encryptor!")
+    print("Instructions:")
+    print("1- Insert the name of the file + extension.")
+    print("2- E to encrypt.")
     print("3- D para descifrar.")
 
 # Cifrar
@@ -23,8 +22,8 @@ def Encrypt(key, filename):
     IV = Random.new().read(16)
     encryptor = AES.new(key, AES.MODE_CBC, IV)
 
-    with open(filename, 'rb') as infile: # Abrir el archivo como lectura
-        with open(outputFile, 'wb') as outfile: # Activar modo escritura
+    with open(filename, 'rb') as infile: # Open file as read
+        with open(outputFile, 'wb') as outfile: # Enable write 
             outfile.write(filesize.encode('UTF-8'))
             outfile.write(IV)
 
@@ -41,7 +40,7 @@ def Encrypt(key, filename):
 # Descifrar
 def Decrypt(key, filename):
     chunksize = 64 * 1024
-    outputFile = input("Nombre de salida(Incluir extension): ")
+    outputFile = input("Output filename (Include extension): ")
 
     with open(filename, 'rb') as infile:
         filesize = int(infile.read(16))
@@ -65,24 +64,24 @@ def getKey(password):
     return hasher.digest()
 
 def Main():
-    Instrucciones()
-    choice = input("Quieres (C)ifrar o (D)escifrar?: ")
+    Instructions()
+    choice = input("Do you want to (E) encrypt or (D) decrypt?: ")
 
-    if choice == "C":
-        filename = input("Archivo a cifrar: ")
-        password = input("Contraseña: ")
+    if choice == "E":
+        filename = input("File to encrypt: ")
+        password = input("Password: ")
         Encrypt(getKey(password), filename)
-        print("Hecho.")
+        print("Done.")
         
     elif choice == "D":
-        filename = input("Archivo a descifrar: ")
-        password = input("Contraseña: ")
+        filename = input("File to decrypt: ")
+        password = input("Password: ")
         
         Decrypt(getKey(password), filename)
-        print("Hecho.")
+        print("Done.")
         
     else:
-        print("Opción incorrecta, cerrando...")
+        print("Incorrect option, closing ...")
 
 if __name__ == '__main__':
     Main()
